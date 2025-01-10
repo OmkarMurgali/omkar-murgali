@@ -1,0 +1,48 @@
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+import random
+print("Welcome to ROCK,PAPER and SCISSSORS GAME!")
+I=int(input("Choose 0 for rock,1 for paper and 2 scissors.\nYour choice?\n"))
+if I==0:
+  print(rock)
+elif 2 == I:
+  print(scissors)
+elif I==1:
+    print(paper)
+else:
+    print("wrong input")
+    exit()
+a=[rock,paper,scissors]
+r=random.choice(a)
+print("Computer Choice: \n",r)
+if r==rock and I==0 or r==paper and I==1:
+    print("Draw")
+elif r==rock and I==1 or r==paper and I==2 or r==scissors and I==0:
+    print("You win")
+elif I==0 and r==paper or I==1 and r==scissors or I==2 and r==rock:
+    print("You loose")
